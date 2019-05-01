@@ -23,12 +23,10 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
 
-
 # Load Dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 names = ['sepal-lenght', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(url, names=names)
-
 
 
 # Dimensions of Dataset
@@ -36,11 +34,9 @@ dataset = pandas.read_csv(url, names=names)
 print(dataset.shape)
 
 
-
 # Peek at the Data
 # head -> you should see the first 20 rows of the data
 print(dataset.head(20))
-
 
 
 # Statistical Summary
@@ -49,11 +45,9 @@ print(dataset.head(20))
 print(dataset.describe())
 
 
-
 # Class Distribution
 # class distribution -> Let’s now take a look at the number of instances (rows) that belong to each class. We can view this as an absolute count
 print(dataset.groupby('class').size())
-
 
 
 # Data Visualization(two types of plots)
@@ -76,7 +70,6 @@ plt.show()
 # scatter plot matrix
 scatter_matrix(dataset)
 plt.show()
-
 
 
 # Evaluate Some Algorithms
@@ -146,7 +139,6 @@ ax = fig.add_subplot(111)
 plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.show() # You can see that the box and whisker plots are squashed at the top of the range, with many samples achieving 100% accuracy
-
 
 
 # Make Predictions
